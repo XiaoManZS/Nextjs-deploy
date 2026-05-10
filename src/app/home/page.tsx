@@ -24,7 +24,6 @@ export default function Home() {
         const {data,error} = await signIn.email({
             email:signInEmail,
             password:signInPassword,
-            callbackURL:'http://localhost:3000/user'
         })
         if (error) {
             console.log(error);
@@ -36,7 +35,6 @@ export default function Home() {
     const signInWithGithub = async () => {
         const {data,error} = await signIn.social({
             provider: 'github',
-            callbackURL:'http://localhost:3000/user'
         })
         if (error) {
             console.log(error);
